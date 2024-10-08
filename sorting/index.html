@@ -11,7 +11,7 @@
 
     <header>
         <h1>Sorting Techniques in DSA</h1>
-        <p>Explore the most essential sorting algorithms and understand their importance in data organization and retrieval.</p>
+        <p>Explore key sorting algorithms that improve data organization for efficient searching and processing.</p>
     </header>
 
     <main>
@@ -19,9 +19,9 @@
         <section class="section">
             <h2>Importance of Sorting</h2>
             <p>
-                Sorting is a fundamental operation in computer science and is essential for organizing data efficiently.
-                It helps in searching, data analysis, and ensures better performance in data retrieval. Most real-life
-                scenarios, such as arranging books in a library or sorting entries in an online store, use some form of sorting.
+                Sorting is crucial for structuring data, enabling efficient search, data management, and optimization tasks.
+                It is widely used in everyday applications like filtering products in e-commerce, prioritizing emails, 
+                and managing files on computers.
             </p>
         </section>
 
@@ -29,9 +29,8 @@
         <section class="section">
             <h3>Real-Life Example of Sorting</h3>
             <p>
-                One real-life example of sorting is **organizing books in a library** by their titles or authors.
-                By sorting them, you can find a specific book quickly. In an online store, sorting product listings by price, ratings,
-                or popularity makes the browsing experience faster and more user-friendly.
+                Imagine an online store where products are listed by price. Sorting helps users easily find the cheapest or most expensive items,
+                improving the user experience. Sorting is also used to arrange books in libraries based on their titles or authors.
             </p>
         </section>
 
@@ -39,18 +38,19 @@
         <section class="section">
             <h3>Choose a Sorting Algorithm to Learn More</h3>
             <div class="button-container">
-                <button onclick="displaySortingInfo('bubble')">Bubble Sort</button>
-                <button onclick="displaySortingInfo('insertion')">Insertion Sort</button>
-                <button onclick="displaySortingInfo('merge')">Merge Sort</button>
+                <a href="bubble_sort.html"><button>Bubble Sort</button></a>
+                <a href="insertion_sort.html"><button>Insertion Sort</button></a>
+                <a href="merge_sort.html"><button>Merge Sort</button></a>
             </div>
         </section>
 
-        <!-- Sorting Algorithm Info Display -->
+        <!-- Try-It Box for Sorting Algorithms -->
         <section class="section">
-            <div id="sorting-info">
-                <h3>Sorting Algorithm Information</h3>
-                <p id="sorting-description">Click on one of the buttons above to learn about a sorting algorithm.</p>
-            </div>
+            <h3>Try It Yourself</h3>
+            <p>Enter a comma-separated list of numbers to sort:</p>
+            <input type="text" id="input-data" placeholder="e.g. 64,34,25,12,22,11,90">
+            <button onclick="performSorting()">Sort</button>
+            <div id="result" class="result-box"></div>
         </section>
     </main>
 

@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background-color: #28a745;
+    background-color: #007bff;
     color: white;
     padding: 20px;
     text-align: center;
@@ -36,7 +36,7 @@ main {
 
 .section h2, .section h3 {
     font-size: 2rem;
-    color: #28a745;
+    color: #007bff;
 }
 
 .section p {
@@ -64,22 +64,20 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Sorting Info Section */
-#sorting-info {
+/* Result Box */
+.result-box {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #007bff;
     background-color: #e6f7ff;
-    padding: 20px;
-    border: 1px solid #b3daff;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
-#sorting-info h3 {
-    margin-top: 0;
-}
-
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #28a745;
+    background-color: #007bff;
     color: white;
     position: fixed;
     bottom: 0;
