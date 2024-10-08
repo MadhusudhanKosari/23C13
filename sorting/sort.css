@@ -1,0 +1,87 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #28a745;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section h2, .section h3 {
+    font-size: 2rem;
+    color: #28a745;
+}
+
+.section p {
+    font-size: 1.1rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Sorting Info Section */
+#sorting-info {
+    background-color: #e6f7ff;
+    padding: 20px;
+    border: 1px solid #b3daff;
+    border-radius: 10px;
+}
+
+#sorting-info h3 {
+    margin-top: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #28a745;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
