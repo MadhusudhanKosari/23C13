@@ -11,16 +11,17 @@
 
     <header>
         <h1>Search Techniques: Linear Search & Binary Search</h1>
-        <p>Learn the difference between Linear and Binary Search, their importance, pros and cons, with real-life examples, tasks, and quizzes.</p>
+        <p>Master the core concepts of Linear and Binary Search through examples, tasks, and hands-on practice.</p>
     </header>
 
     <main>
+        <!-- Linear Search Section -->
         <section class="section">
             <h2>Linear Search</h2>
-            <p><strong>Importance:</strong> Linear search is a basic searching technique where each element in the list is checked sequentially. It's often used for unsorted or small datasets.</p>
-            <p><strong>Pros:</strong> Simple to implement, works on both sorted and unsorted data.</p>
-            <p><strong>Cons:</strong> Inefficient for large datasets as it requires scanning all elements.</p>
-            <p><strong>Real-Life Example:</strong> Searching for a book in a stack of unsorted books, one book at a time.</p>
+            <p><strong>Importance:</strong> Linear search is a simple algorithm used when data is unsorted or when the dataset is small.</p>
+            <p><strong>Pros:</strong> Works on both sorted and unsorted data, easy to implement.</p>
+            <p><strong>Cons:</strong> Inefficient for large datasets as it requires scanning each element.</p>
+            <p><strong>Real-Life Example:</strong> Searching for a specific contact on your phone by scrolling through the entire list.</p>
             
             <h3>Linear Search Code - Iteration</h3>
             <pre><code>
@@ -48,7 +49,7 @@ int main() {
     return 0;
 }
             </code></pre>
-            <p><strong>Time Complexity:</strong> O(n) where n is the number of elements.</p>
+            <p><strong>Time Complexity:</strong> O(n)</p>
 
             <h3>Linear Search Code - Recursion</h3>
             <pre><code>
@@ -79,12 +80,13 @@ int main() {
             <p><strong>Time Complexity:</strong> O(n)</p>
         </section>
 
+        <!-- Binary Search Section -->
         <section class="section">
             <h2>Binary Search</h2>
-            <p><strong>Importance:</strong> Binary search is an efficient algorithm that finds the position of a target element within a sorted array by repeatedly dividing the search interval in half.</p>
-            <p><strong>Pros:</strong> Efficient for large, sorted datasets. Reduces the search space quickly.</p>
-            <p><strong>Cons:</strong> Requires the data to be sorted.</p>
-            <p><strong>Real-Life Example:</strong> Looking up a word in a dictionary by starting at the middle and discarding the half where the word can't exist.</p>
+            <p><strong>Importance:</strong> Binary search is an efficient algorithm for finding a target element in a sorted dataset.</p>
+            <p><strong>Pros:</strong> Reduces the search space by half with each step, making it faster for large sorted datasets.</p>
+            <p><strong>Cons:</strong> Only works on sorted datasets.</p>
+            <p><strong>Real-Life Example:</strong> Looking up a word in a dictionary by starting in the middle and narrowing down the search space.</p>
 
             <h3>Binary Search Code - Iteration</h3>
             <pre><code>
@@ -158,34 +160,29 @@ int main() {
             <p><strong>Time Complexity:</strong> O(log n)</p>
         </section>
 
+        <!-- Try It Yourself Section -->
         <section class="section">
             <h2>Try It Yourself</h2>
-            <label for="search-type">Choose Search Type:</label>
-            <select id="search-type">
-                <option value="linear">Linear Search</option>
-                <option value="binary">Binary Search</option>
-            </select>
-            <div>
-                <label for="input-data">Enter Elements (comma-separated):</label>
-                <input type="text" id="input-data" placeholder="e.g., 10, 23, 45, 70, 11">
-            </div>
-            <div>
-                <label for="target">Enter Target Element:</label>
-                <input type="number" id="target">
-            </div>
-            <button onclick="performSearch()">Search</button>
-            <p id="result"></p>
-        </section>
+            <div class="try-box">
+                <label for="search-type">Choose Search Type:</label>
+                <select id="search-type">
+                    <option value="linear">Linear Search</option>
+                    <option value="binary">Binary Search</option>
+                </select>
+                
+                <div>
+                    <label for="input-data">Enter Elements (comma-separated):</label>
+                    <input type="text" id="input-data" placeholder="e.g., 10, 23, 45, 70, 11">
+                </div>
 
-        <section class="section">
-            <h2>Quiz</h2>
-            <p>Test your knowledge on linear and binary search:</p>
-            <ul>
-                <li>1. What is the time complexity of linear search?</li>
-                <li>2. What condition must be met for binary search to work?</li>
-                <li>3. How does binary search reduce the search space?</li>
-                <li>4. When would you prefer linear search over binary search?</li>
-            </ul>
+                <div>
+                    <label for="target">Enter Target Element:</label>
+                    <input type="number" id="target">
+                </div>
+
+                <button onclick="performSearch()">Search</button>
+                <p id="result"></p>
+            </div>
         </section>
     </main>
 
@@ -193,6 +190,6 @@ int main() {
         &copy; 2024 DSA Learning Platform
     </footer>
 
-    <script src="seacrh.js"></script>
+    <script src="search.js"></script>
 </body>
 </html>

@@ -6,19 +6,19 @@ function performSearch() {
     let result;
 
     if (searchType === 'linear') {
-        result = linearSearch(inputData, inputData.length, target);
+        result = linearSearch(inputData, target);
     } else if (searchType === 'binary') {
         inputData.sort((a, b) => a - b); // Binary search requires sorted data
         result = binarySearch(inputData, 0, inputData.length - 1, target);
     }
 
     document.getElementById('result').textContent = result !== -1
-        ? `Element found at index ${result}`
+        ? `Element found at index ${result}. Time Complexity: ${searchType === 'linear' ? 'O(n)' : 'O(log n)'}`
         : 'Element not found';
 }
 
-function linearSearch(arr, n, target) {
-    for (let i = 0; i < n; i++) {
+function linearSearch(arr, target) {
+    for (let i = 0; i < arr.length; i++) {
         if (arr[i] === target) return i;
     }
     return -1;
