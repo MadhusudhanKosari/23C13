@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Sort - DSA Learning Platform</title>
+    <link rel="stylesheet" href="insertionSort.css">
+</head>
+<body>
+    <header>
+        <h1>Insertion Sort</h1>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2>Importance of Insertion Sort</h2>
+            <p>
+                Insertion Sort is an efficient algorithm for small datasets. It is a stable sorting technique 
+                and works well for nearly sorted data, making it a great option for simple use cases. Its easy-to-understand nature makes it a commonly used sorting method in various applications.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Time and Space Complexities</h2>
+            <ul>
+                <li>Worst Case Time Complexity: O(n²)</li>
+                <li>Average Case Time Complexity: O(n²)</li>
+                <li>Best Case Time Complexity: O(n) (when the array is nearly sorted)</li>
+                <li>Space Complexity: O(1)</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>When to Use Insertion Sort</h2>
+            <p>
+                Insertion Sort is best used when the dataset is small or mostly sorted. Its performance can degrade for large datasets, 
+                but it excels when sorting real-time incoming data like sorting cards in hand.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Real-Life Example</h2>
+            <p>
+                Imagine arranging playing cards in your hand. You start by picking up the first card and then, 
+                one by one, you insert the next card into its correct position among the already sorted cards. This is exactly how Insertion Sort works.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Insertion Sort Code (C Language)</h2>
+            <pre>
+                <code>
+                void insertionSort(int arr[], int n) {
+                    for (int i = 1; i < n; i++) {
+                        int key = arr[i];
+                        int j = i - 1;
+                        while (j >= 0 && arr[j] > key) {
+                            arr[j + 1] = arr[j];
+                            j = j - 1;
+                        }
+                        arr[j + 1] = key;
+                    }
+                }
+                </code>
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>Try It Yourself</h2>
+            <p>Enter numbers separated by commas (e.g., 9,3,1,5,2):</p>
+            <input type="text" id="insertion-input" placeholder="Enter numbers">
+            <button onclick="sortAndDisplay()">Sort</button>
+            <p id="insertion-output"></p>
+            <p id="insertion-time"></p>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 DSA Learning Platform
+    </footer>
+
+    <script src="insertionSort.js"></script>
+</body>
+</html>
