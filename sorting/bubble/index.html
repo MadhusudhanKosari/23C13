@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort - DSA Learning Platform</title>
+    <link rel="stylesheet" href="bubble.css">
+</head>
+<body>
+    <header>
+        <h1>Bubble Sort</h1>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2>Importance of Bubble Sort</h2>
+            <p>
+                Bubble Sort is a simple and easy-to-understand sorting algorithm often used in educational contexts. 
+                It's particularly useful for understanding the basics of sorting algorithms. Although inefficient for large datasets, 
+                it can be useful for small or nearly sorted data.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Time and Space Complexities</h2>
+            <ul>
+                <li>Worst Case Time Complexity: O(n²)</li>
+                <li>Average Case Time Complexity: O(n²)</li>
+                <li>Best Case Time Complexity: O(n) (when the array is already sorted)</li>
+                <li>Space Complexity: O(1)</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>When to Use Bubble Sort</h2>
+            <p>
+                Bubble Sort should be used when you have a small dataset or when the dataset is nearly sorted. 
+                It is inefficient for large datasets due to its O(n²) time complexity.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Real-Life Example</h2>
+            <p>
+                Imagine a teacher arranging students based on their height in ascending order. 
+                The teacher starts from the leftmost student and compares adjacent students, swapping them if they are in the wrong order. 
+                The teacher continues this process until all students are in the correct order.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Bubble Sort Code (C Language)</h2>
+            <pre>
+                <code>
+                void bubbleSort(int arr[], int n) {
+                    for (int i = 0; i < n-1; i++) {
+                        for (int j = 0; j < n-i-1; j++) {
+                            if (arr[j] > arr[j+1]) {
+                                // Swap arr[j] and arr[j+1]
+                                int temp = arr[j];
+                                arr[j] = arr[j+1];
+                                arr[j+1] = temp;
+                            }
+                        }
+                    }
+                }
+                </code>
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>Try It Yourself</h2>
+            <p>Enter numbers separated by commas (e.g., 5,1,4,2,8):</p>
+            <input type="text" id="bubble-input" placeholder="Enter numbers">
+            <button onclick="sortAndDisplay()">Sort</button>
+            <p id="bubble-output"></p>
+            <p id="bubble-time"></p>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 DSA Learning Platform
+    </footer>
+
+    <script src="bubble.js"></script>
+</body>
+</html>
