@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge Sort - DSA Learning Platform</title>
+    <link rel="stylesheet" href="mergeSort.css">
+</head>
+<body>
+    <header>
+        <h1>Merge Sort</h1>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2>Importance of Merge Sort</h2>
+            <p>
+                Merge Sort is a highly efficient sorting algorithm that uses a divide-and-conquer approach. 
+                It works well for large datasets, is stable, and guarantees O(n log n) performance even in the worst case.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Time and Space Complexities</h2>
+            <ul>
+                <li>Worst Case Time Complexity: O(n log n)</li>
+                <li>Average Case Time Complexity: O(n log n)</li>
+                <li>Best Case Time Complexity: O(n log n)</li>
+                <li>Space Complexity: O(n)</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>When to Use Merge Sort</h2>
+            <p>
+                Merge Sort is ideal when working with large datasets and when stability is important. It is widely used in external sorting, where the data being sorted cannot fit into the main memory (e.g., sorting files on disk).
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Real-Life Example</h2>
+            <p>
+                Imagine you have two sorted piles of cards, and you need to combine them into one sorted pile. You go card by card, comparing the top cards from both piles and placing the smaller one in the combined pile. This is how Merge Sort works with two arrays.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Merge Sort Explained</h2>
+            <h3>1. Sorting a Single Array</h3>
+            <p>In this approach, we divide the array into smaller subarrays, sort them, and then merge them back together.</p>
+
+            <h3>2. Merging Two Arrays</h3>
+            <p>This approach involves combining two already sorted arrays into one sorted array by comparing elements from both arrays step by step.</p>
+        </section>
+
+        <section class="section">
+            <h2>Merge Sort Code (C Language)</h2>
+            <pre>
+                <code>
+                void merge(int arr[], int left, int mid, int right) {
+                    int n1 = mid - left + 1;
+                    int n2 = right - mid;
+
+                    int L[n1], R[n2];
+
+                    for (int i = 0; i < n1; i++)
+                        L[i] = arr[left + i];
+                    for (int j = 0; j < n2; j++)
+                        R[j] = arr[mid + 1 + j];
+
+                    int i = 0, j = 0, k = left;
+
+                    while (i < n1 && j < n2) {
+                        if (L[i] <= R[j]) {
+                            arr[k] = L[i];
+                            i++;
+                        } else {
+                            arr[k] = R[j];
+                            j++;
+                        }
+                        k++;
+                    }
+
+                    while (i < n1) {
+                        arr[k] = L[i];
+                        i++;
+                        k++;
+                    }
+
+                    while (j < n2) {
+                        arr[k] = R[j];
+                        j++;
+                        k++;
+                    }
+                }
+
+                void mergeSort(int arr[], int left, int right) {
+                    if (left < right) {
+                        int mid = left + (right - left) / 2;
+                        mergeSort(arr, left, mid);
+                        mergeSort(arr, mid + 1, right);
+                        merge(arr, left, mid, right);
+                    }
+                }
+                </code>
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>Try It Yourself</h2>
+            <p>Enter numbers separated by commas (e.g., 12,9,3,7,14,11):</p>
+            <input type="text" id="merge-input" placeholder="Enter numbers">
+            <button onclick="sortAndDisplay()">Sort</button>
+            <p id="merge-output"></p>
+            <p id="merge-time"></p>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 DSA Learning Platform
+    </footer>
+
+    <script src="mergeSort.js"></script>
+</body>
+</html>
